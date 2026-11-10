@@ -53,16 +53,16 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 %.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-    ar rcs $(NAME).a $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
-    rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-    rm -f $(NAME).a
+	rm -f $(NAME)
 
 re: fclean all
 

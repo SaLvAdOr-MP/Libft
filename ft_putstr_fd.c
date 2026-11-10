@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 11:22:47 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/07 11:29:16 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/09 22:08:24 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ void	ft_putstr_fd(char *s, int fd)
 	write(fd, s, l);
 }
 
+/*
 int	main(int ac, char const **av)
 {
 	if (ac != 2)
-		return (0);
-	ft_putstr_fd("Hello", av[1]);
+	return (0);
+	ft_putstr_fd("Hello", ft_atoi(av[1]));
 	return (0);
 }
+*/

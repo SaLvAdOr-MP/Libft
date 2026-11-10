@@ -6,16 +6,17 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 09:40:54 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/07 11:08:57 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/09 21:30:05 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 static char	*helper(unsigned int, char)
 {
 	
 }
+*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -33,7 +34,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (str);
 }
-
+/*
 int	main(void)
 {
 	char *str = ft_strmapi("1234", helper);
@@ -41,3 +42,4 @@ int	main(void)
 	free(str);
 	return (0);
 }
+*/

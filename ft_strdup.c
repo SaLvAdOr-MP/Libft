@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:42:40 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/06 10:27:55 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/09 21:48:42 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s)
 	char	*str;
 	int		i;
 
-	str = malloc(sizeof(s) * ft_strlen(s));
+	str = malloc(sizeof(*s) * ft_strlen(s) + 1);
 	if (str == NULL)
 		return (NULL);
 	i = 0;
@@ -26,6 +26,7 @@ char	*ft_strdup(const char *s)
 		str[i] = s[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 

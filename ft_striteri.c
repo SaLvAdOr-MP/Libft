@@ -6,18 +6,20 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 10:58:20 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/07 11:09:38 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/10 13:55:07 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
 static void	*helper(unsigned int, char*)
 {
 	
 }
+*/
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
@@ -28,7 +30,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
+/*
 int	main(void)
 {
 	char *str = "1234";
@@ -37,3 +39,4 @@ int	main(void)
 	free(str);
 	return (0);
 }
+*/

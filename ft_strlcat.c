@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 14:10:07 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/04 18:10:14 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/09 21:40:51 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (k + n);
 }
-
+/*
 int	main(void)
 {
 	char	s1[] = "dfgfghfjh";
 	char	s2[] = "qwertyuiop";
-
+	
 	printf ("%zu", ft_strlcat(s2, s1, 14));
 	printf ("\n%s", s2);
 }
+*/

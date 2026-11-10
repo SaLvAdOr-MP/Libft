@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 09:29:49 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/06 14:18:52 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/09 21:28:42 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,31 @@ static	int	nstr(char const *s, char c)
 			nstr++;
 		i++;
 	}
-	retun (nstr);
+	return (nstr);
 }
 
 static	int	ccount(char const *s, char c, int i)
 {
 	int	j;
 	int	x;
-	int nc;
+	/*int nc;*/
 	
 	j = 0;
-	nc = 0;
 	x = 0;
 	while (s[j])
 	{
 		if (s[j] == c && i == 0)
 			return (j - x);
 		else if (s[j] == c && s[j + 1] == c)
-			
+			x++;
+		else if (s[j] == c && i > 0)
+		{
+			i--;
+			x++;
+		}
+		j++;	
 	}
+	return (j - x);
 }
 
 char	**ft_split(char const *s, char c)
@@ -59,9 +65,6 @@ char	**ft_split(char const *s, char c)
 	{
 		str[i] = malloc(sizeof(**str) * (ccount(s, c, i) + 1));
 	}
-}
-
-int	main()
-{
-	
+	str[i] = NULL;
+	return (str);
 }

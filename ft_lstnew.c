@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 13:55:37 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/07 16:24:33 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/10 13:35:12 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_list	*ft_lstnew(void *content)
 	return (lnew);
 }
 
+/*
 int	main(void)
 {
 	t_list	*listI;
@@ -32,7 +33,7 @@ int	main(void)
 
 	listI = malloc(sizeof(t_list));
 	if (!listI)
-		return (0);
+	return (0);
 	listI->content = &c;
 	listI->next = ft_lstnew(n);
 
@@ -40,3 +41,4 @@ int	main(void)
 	printf("%s\n", (char *)listI->next->content);
 	return (0);
 }
+*/
