@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 14:21:28 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/06 15:51:28 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/11 19:03:22 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	ft_putnbr(int nb, char *str, int j)
 char	*ft_itoa(int n)
 {
 	int		m;
-	int		nb;
+	long	nb;
 	char	*str;
 
 	nb = n;
@@ -45,15 +45,18 @@ char	*ft_itoa(int n)
 		nb = nb / 10;
 		m++;
 	}
-	str = malloc(sizeof(*str) * (m + 1));
+	str = malloc(sizeof(*str) * (m + 2));
 	if (!str)
 		return (NULL);
 	ft_putnbr(n, str, m);
+	str[m + 1] = '\0';
 	return (str);
 }
 
-// int	main(void)
-// {
-// 	printf("%s", ft_itoa(0));
-// 	return (0);
-// }
+/*
+int	main(void)
+{
+	printf("%s", ft_itoa(-2147483648));
+	return (0);
+}
+*/

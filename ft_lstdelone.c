@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 17:34:48 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/09 17:50:47 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/11 19:05:52 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,10 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
+
+/*
+int	main(void)
+{
+	
+}
+*/

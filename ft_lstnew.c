@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 13:55:37 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/10 13:35:12 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/10 14:26:25 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 
 	listI = malloc(sizeof(t_list));
 	if (!listI)
-	return (0);
+		return (1);
 	listI->content = &c;
 	listI->next = ft_lstnew(n);
 

@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 17:30:36 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/09 17:48:59 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/11 19:05:22 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
+
+/*
+int	main(void)
+{
+	
+}
+*/

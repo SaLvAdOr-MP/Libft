@@ -6,65 +6,104 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 09:29:49 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/09 21:28:42 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/11 18:42:01 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	nstr(char const *s, char c)
+static int	nbstr(char const *s, char c)
 {
 	int	i;
-	int	nstr;
+	int	nbstr;
 
 	i = 0;
-	nstr = 0;
+	nbstr = 0;
 	while (s[i])
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-			nstr++;
+			nbstr++;
 		i++;
 	}
-	return (nstr);
+	return (nbstr);
 }
 
-static	int	ccount(char const *s, char c, int i)
+static void	*sfree(char **str, int j)
 {
-	int	j;
-	int	x;
-	/*int nc;*/
-	
-	j = 0;
-	x = 0;
-	while (s[j])
+	int	i;
+
+	i = 0;
+	while (i < j)
 	{
-		if (s[j] == c && i == 0)
-			return (j - x);
-		else if (s[j] == c && s[j + 1] == c)
-			x++;
-		else if (s[j] == c && i > 0)
-		{
-			i--;
-			x++;
-		}
-		j++;	
+		free(str[i]);
+		i++;
 	}
-	return (j - x);
+	free(str);
+	return (NULL);
+}
+
+static char	**wword(char const *s, char c, int i, char **str)
+{
+	int	sz;
+	int	j;
+	int	k;
+
+	j = 0;
+	k = 0;
+	while (i)
+	{
+		while (s[j] == c)
+			j++;
+		sz = 0;
+		while (s[j + sz] != c && s[j + sz])
+			sz++;
+		str[k] = malloc(sizeof(**str) * (sz + 1));
+		if (!str[k])
+			return (sfree(str, k));
+		ft_strlcpy(str[k], s + j, sz + 1);
+		j = j + sz;
+		k++;
+		i--;
+	}
+	str[k] = NULL;
+	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
 	int		i;
-	
-	str = malloc(sizeof(*str) * (nstr(s, c) + 1));
+
+	i = nbstr(s, c);
+	str = malloc(sizeof(*str) * (i + 1));
 	if (!str)
 		return (NULL);
-	i = 0;
-	while (i < nstr(s, c))
-	{
-		str[i] = malloc(sizeof(**str) * (ccount(s, c, i) + 1));
-	}
-	str[i] = NULL;
-	return (str);
+	return (wword(s, c, i, str));
 }
+
+/*
+int	main(void)
+{
+	char **str;
+	
+	str = ft_split("   ola, tudo bem?   ", ' ');
+	while (*str)
+	{
+		printf("%s\n", *str);
+		str++;
+	}
+	str = ft_split("ola,_tudo_bem?", ' ');
+	while (*str)
+	{
+		printf("%s\n", *str);
+		str++;
+	}
+	str = ft_split("", ' ');
+	while (*str)
+	{
+		printf("%s\n", *str);
+		str++;
+	}
+	return (0);
+}
+*/

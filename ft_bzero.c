@@ -6,13 +6,13 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 11:10:44 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/10/28 11:28:58 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/11 18:39:25 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *s, size_t n)
 {
 	unsigned char	*str;
 	size_t			i;
@@ -24,6 +24,7 @@ void	ft_bzero(void *s, size_t n)
 		str[i] = '\0';
 		i++;
 	}
+	return (s);
 }
 
 // int	main(void)

@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 15:27:29 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/10 13:55:52 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/11 19:05:38 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,10 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
+
+/*
+int	main(void)
+{
+	
+}
+*/
