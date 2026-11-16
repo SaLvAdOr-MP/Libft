@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 16:41:36 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/04 18:46:07 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/16 15:45:48 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (comp(s1[i], set) != 0)
 		i++;
 	j = ft_strlen(s1);
-	while (comp(s1[j - 1], set) != 0)
+	while (j > 0 && comp(s1[j - 1], set) != 0)
 		j--;
 	str = ft_substr(s1, i, (j - i));
 	return (str);

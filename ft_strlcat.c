@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 14:10:07 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/09 21:40:51 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/16 16:16:42 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	n = 0;
-	while (dst[i])
+	while (i < size && dst[i])
 		i++;
 	while (src[n])
 		n++;
@@ -36,6 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (k + n);
 }
+
 /*
 int	main(void)
 {
