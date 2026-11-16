@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 15:27:00 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/10 13:59:58 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/15 18:12:17 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 
+/* Part 1: verification */
 int				ft_isalpha(int c);
 int				ft_isalnum(int c);
 int				ft_isdigit(int c);
@@ -26,6 +27,7 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 size_t			ft_strlen(const char *s);
 
+/* Part 1: string manipulation */
 void			*ft_memset(void *s, int c, size_t n);
 void			*ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -42,6 +44,7 @@ int				ft_atoi(const char *nptr);
 void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *s);
 
+/* Part 2 */
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
@@ -54,6 +57,7 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
+/* Part 3: Linked list functions */
 typedef struct s_list
 {
 	void			*content;
@@ -70,5 +74,5 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
-
+   
 #endif

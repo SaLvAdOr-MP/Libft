@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 17:52:11 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/11 19:05:55 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/16 15:01:24 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
 
-	if (!lst || !del)
+	if (!*lst || !del)
 		return ;
 	while (*lst)
 	{
@@ -25,10 +25,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		*lst = temp;
 	}
 }
-
-/*
-int	main(void)
-{
-	
-}
-*/

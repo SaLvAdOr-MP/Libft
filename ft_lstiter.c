@@ -6,7 +6,7 @@
 /*   By: smaria-r <smaria-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 17:55:52 by smaria-r          #+#    #+#             */
-/*   Updated: 2026/11/11 19:05:59 by smaria-r         ###   ########.fr       */
+/*   Updated: 2026/11/16 15:00:58 by smaria-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-
-/*
-int	main(void)
-{
-	
-}
-*/
